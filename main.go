@@ -7,6 +7,7 @@ import (
 	"fmt"
 	"os"
 	"os/signal"
+	"runtime"
 
 	"github.com/aws/aws-sdk-go-v2/aws"
 	"github.com/aws/aws-sdk-go-v2/config"
@@ -71,6 +72,8 @@ func (p Plugin) MetricKeyPrefix() string {
 	return p.Prefix
 }
 
+var Version string = "current"
+
 func main() {
 	if err := _main(); err != nil {
 		fmt.Println(err)
@@ -83,7 +86,15 @@ func _main() error {
 	optTempfile := flag.String("tempfile", "", "Temp file name")
 	optStreamName := flag.String("stream-name", "", "Kinesis Stream name")
 	optRegion := flag.String("region", "", "AWS Region")
+	optVersion := flag.Bool("version", false, "Show version")
 	flag.Parse()
+
+	if *optVersion {
+		fmt.Println("mackerel-plugin-aws-kinesis-data-stream-shard-count version:", Version)
+		fmt.Println("go version:", runtime.Version())
+		return nil
+	}
+
 	if *optStreamName == "" {
 		return errors.New("stream-name is required")
 	}
