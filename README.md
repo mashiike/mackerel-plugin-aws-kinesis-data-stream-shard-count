@@ -1,2 +1,2 @@
-# mackerel-plugin-aws-kinesis-data-stream-shard-count
-mackerel-plugin for Amazon Kinesis Data Stream's Shard Count
+# mackerel-plugin-aws-kinesis
+mackerel-plugin for Amazon Kinesis

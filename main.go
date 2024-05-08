@@ -15,7 +15,7 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/kinesis/types"
 	"github.com/aws/smithy-go"
 	mp "github.com/mackerelio/go-mackerel-plugin"
-	"github.com/mashiike/mackerel-plugin-aws-kinesis-data-stream-shard-count/internal/kinesisx"
+	"github.com/mashiike/mackerel-plugin-aws-kinesis/internal/kinesisx"
 	"golang.org/x/text/cases"
 	"golang.org/x/text/language"
 )
@@ -90,7 +90,7 @@ func _main() error {
 	flag.Parse()
 
 	if *optVersion {
-		fmt.Println("mackerel-plugin-aws-kinesis-data-stream-shard-count version:", Version)
+		fmt.Println("mackerel-plugin-aws-kinesis version:", Version)
 		fmt.Println("go version:", runtime.Version())
 		return nil
 	}

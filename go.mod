@@ -1,4 +1,4 @@
-module github.com/mashiike/mackerel-plugin-aws-kinesis-data-stream-shard-count
+module github.com/mashiike/mackerel-plugin-aws-kinesis
 
 go 1.22.0
 
