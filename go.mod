@@ -10,7 +10,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/kinesis v1.27.4
 	github.com/aws/smithy-go v1.20.2
 	github.com/mackerelio/go-mackerel-plugin v0.1.4
-	golang.org/x/text v0.3.7
+	golang.org/x/text v0.3.8
 )
 
 require (
